@@ -11,6 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://soloayaya.github.io/reactweek5/",
   "dependencies": {
     "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
