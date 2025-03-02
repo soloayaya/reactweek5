@@ -200,7 +200,7 @@ function App() {
                       查看更多
                     </button>
                     <button
-                      onAuxClick={() => addCartItem(product.id, 1)}
+                      onClick={() => addCartItem(product.id, 1)}
                       type="button"
                       className="btn btn-outline-danger"
                     >
@@ -335,6 +335,7 @@ function App() {
                                 cartItem.qty - 1
                               )
                             }
+                            disabled={cartItem.qty === 1} // 當數量為1時禁用 "-" 按鈕
                             type="button"
                             className="btn btn-outline-dark btn-sm"
                           >
@@ -354,13 +355,13 @@ function App() {
                                 cartItem.qty + 1
                               )
                             }
-                            disabled={cartItem.qty === 1}
                             type="button"
                             className="btn btn-outline-dark btn-sm"
                           >
                             +
                           </button>
                         </div>
+
                         <span className="input-group-text bg-transparent border-0">
                           {cartItem.product.unit}
                         </span>
